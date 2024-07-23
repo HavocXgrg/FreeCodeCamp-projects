@@ -8,12 +8,20 @@
 </head>
 <body>
     <main>
-        <h1>Telephone Number Validator</h1>
+        <h1>Telephone Number</h1>
+        <h1><span class="validator-text">Validator</span></h1>
         <div class="phone-container">
             <div class="phone-bg">
                 <div class="phone-camera"></div>
             </div>
-            <label for="user-input">Enter a Phone Number</label>
+            <label for="user-input">Enter a Phone Number:</label>
+            <input type="text" name="user-input" id="user-input">
+            <div class="results" id="results-div"></div>
+            
+            <footer>
+                <button type="button">Check</button>
+                <button type="button">Clear</button>
+            </footer>
         </div>
     </main>
 
