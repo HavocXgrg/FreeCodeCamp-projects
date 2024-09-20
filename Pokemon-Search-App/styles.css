@@ -17,9 +17,10 @@ main{
 
 .container{
     margin-top: 2rem;
+    margin-bottom: 2rem;
     background-color: #f5f6f7;
     min-width: 30%;
-    height: 100vh;
+    height: 105vh;
     border-radius: 1.1rem;
 }
 form{
@@ -80,6 +81,7 @@ table{
 th{
     padding: 8px;
     font-size: 1.3rem;
+    
 }
 td{
     padding: 6px;
@@ -96,6 +98,39 @@ td{
     margin: 10px 0 0 25px;
 
 }
+/* .sprite-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.sprite-container #pokemon-image {
+    width: 100%;  /* Set the desired width */
+    height: auto;  /* Let the height adjust automatically to maintain aspect ratio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pokemon-image img{
+    width: 50%;
+    height: auto;
+}
+#types{
+    margin-bottom: 20px;
+}
+#types span{
+    color: rgb(33, 13, 13);
+    background-color: #dcc604;
+    padding: 8px;
+    margin: 0 0 0 20px;
+    border-radius: 7px;
+}
 
 
 
+
+@media screen and (min-width: 550px) {
+    .container {
+        width: 450px;
+    }
+}
