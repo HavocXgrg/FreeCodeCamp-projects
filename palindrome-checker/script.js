@@ -1,19 +1,25 @@
-let result = document.getElementById('result')
+const inputField = document.getElementById("text-input");
+const result = document.getElementById("result");
+const btn = document.getElementById("check-btn");
 
-document.getElementById('check-btn').addEventListener('click', function() {
-    var inputText = document.getElementById('text-input').value;
-    if (inputText.trim() === "") {
-      alert("Please input a value");
-    } else {
-      // Remove non-alphanumeric characters and convert to lowercase for comparison
-      var cleanedText = inputText.toLowerCase().replace(/[^a-z0-9]/g, '');
-      var reversedText = cleanedText.split('').reverse().join('');
-      if (cleanedText === reversedText) {
-        result.innerText = inputText + " is a palindrome";
-      } else {
-        result.innerText = inputText + " is not a palindrome";
-      }
-      result.classList.remove('hidden')
-    }
-    
-  });
+const palindromeChecker = () => {
+  const inputText = inputField.value.trim();
+
+  if (!inputText) {
+    // Check if input is empty
+    alert("Please input a value");
+    return;
+  }
+  // Remove non-alphanumeric characters and convert to lowercase for comparison
+  const cleanedText = inputText.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const reversedText = cleanedText.split("").reverse().join("");
+
+  if (cleanedText === reversedText) {
+    result.innerText = inputText + " is a palindrome";
+  } else {
+    result.innerText = inputText + " is not a palindrome";
+  }
+  result.classList.remove("hidden");
+};
+
+btn.addEventListener("click", palindromeChecker);
